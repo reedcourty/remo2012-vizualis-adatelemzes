@@ -114,12 +114,31 @@ A gyakorlat célja, hogy nagy vonalakban bemutassuk a vizuális adatelemzést é
 \todo{Bővíteni!}
 
 %------------------------------------------------------------------------------
-\section{A TPC benchmarkok}
-\subsection{A TPC benchmark}
-A TPC benchmarkokat a nonprofit \textit{Transaction Processing Performance Council} dolgozta ki, amelyek főleg web és adatbázis rendszerek teljesítményét hivatottak mérni. További információk: \url{http://www.tpc.org}
-\subsection{A TPC-C benchmark}
-A TPC-C benchmark egy összetett OLTP (On-line Transaction Processing) benchmark, amely különböző típusú és komplexitású konkurens tranzakciók percenkénti számát méri (tpmC).
+\section{Benchmarking}
+\subsection{Mik azok a benchmarkok?}
 
+A benchmarkok olyan részletesen specifikált, dokumentált, megismételhető mérések, amelyek segítségével hardver- és/vagy szoftverkonfigurációk teljesítményeinek összehasonlítását hivatottak segíteni. A benchmark környezet specifikációjában rögzített a
+
+\begin{sajat_itemize}
+\item hardver komponensek listája,
+\item szoftver komponensek listája,
+\item üzemviszonyok,
+\item ütemezés,
+\item dokumentáció.
+\end{sajat_itemize} 
+
+\subsection{A TPC benchmarkok}
+A TPC benchmarkokat a nonprofit \textit{Transaction Processing Performance Council} dolgozta ki, amelyek főleg web és adatbázis rendszerek teljesítményét hivatottak mérni.
+
+További információkat a szervezet honlapján (\url{http://www.tpc.org}) találhatunk.
+
+\subsection{A TPC-C benchmark}
+A TPC-C benchmark egy összetett OLTP (On-line Transaction Processing) benchmark, amely különböző típusú és komplexitású konkurens tranzakciók percenkénti számát méri (tpmC). A tranzakciók lefutási idejére rögzített felső korlát van.
+
+A mérési környezet része egy mintaadatbázis, amely ügyfeleket és megrendeléseket tartalmaz. A mérés kialakításánál igyekeztek ACID körülményeket, és a felhasználók gondolkodási idejét is szimulálni. A mért adatok az áteresztőképesség (tpmC) és a hatékonyság (ár/tpmC). 
+
+A segédlet további részében ezeket az eredményeket fogjuk felhasználni.
+ 
 %------------------------------------------------------------------------------
 \section{Adattisztítás}
 
