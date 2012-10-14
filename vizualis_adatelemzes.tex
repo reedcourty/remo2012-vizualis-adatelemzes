@@ -1,0 +1,68 @@
+\documentclass[a4paper,10pt,titlepage]{article}
+% PREUMBULUM
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{a4wide} 
+\usepackage{times}
+
+\usepackage[magyar,english]{babel}
+
+% Forráskódoknak:
+\usepackage{listings}
+
+% Tartalomjegyzék:
+\usepackage{tocbibind}
+
+\usepackage[usenames,dvipsnames]{color}
+
+% Hogy legyen képünk:
+\usepackage{graphicx}
+
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,
+    unicode=true,
+    colorlinks=true,
+    linkcolor=RoyalBlue,
+    citecolor=RoyalBlue,
+    filecolor=RoyalBlue,
+    urlcolor=RoyalBlue,
+}
+
+% Táblázatoknak:
+\usepackage{colortbl}
+
+% Ha kell matek:
+\usepackage{amssymb,amsmath}
+
+\usepackage{subfig}
+\usepackage{verbatim} % Hogy lehessen blokkkommentezni
+
+\usepackage{ftsrgtemplate}
+
+%###########################################
+% Saját eszközök:
+%
+\definecolor{todobgszin}{rgb}{0.64,0.78,0.22}
+\definecolor{todofrszin}{rgb}{0.00,0.50,0.00}
+
+\newcommand{\todo}[1]{\fcolorbox{todofrszin}{todobgszin}{\emph{TODO: #1}}}
+\newcommand{\angolul}[1]{\foreignlanguage{english}{#1}}
+
+\newenvironment{sajat_itemize}
+{
+	\begin{itemize}
+	\setlength{\itemsep}{0pt}
+}
+{
+	\end{itemize}
+}
+
+\begin{document}
+% Dokumentumtörzs
+
+\selectlanguage{magyar}
+
+
+\end{document}
