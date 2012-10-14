@@ -5,6 +5,10 @@ commit.log
 *.aux
 *.log
 *.out
+*.toc
+
+# Egyelõre nem kell nekünk a magyar.ldf a repóba:
+magyar.ldf
 
 # Most a sablon miatt külön kezeljük a PDF-eket:
 vizualis_adatelemzes.pdf
