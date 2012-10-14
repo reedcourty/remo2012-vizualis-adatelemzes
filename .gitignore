@@ -1,0 +1,10 @@
+# A commit.log nem kell:
+commit.log
+
+# A szokásos szükségtelen LaTeX generálmányok:
+*.aux
+*.log
+*.out
+
+# Most a sablon miatt külön kezeljük a PDF-eket:
+vizualis_adatelemzes.pdf
