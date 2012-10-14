@@ -33,6 +33,8 @@
     urlcolor=RoyalBlue,
 }
 
+\usepackage{url}
+
 % Táblázatoknak:
 \usepackage{colortbl}
 
@@ -50,8 +52,27 @@
 \definecolor{todobgszin}{rgb}{0.64,0.78,0.22}
 \definecolor{todofrszin}{rgb}{0.00,0.50,0.00}
 
-\newcommand{\todo}[1]{\fcolorbox{todofrszin}{todobgszin}{\emph{TODO: #1}}}
+%\newcommand{\todo}[1]{\fcolorbox{todofrszin}{todobgszin}{\emph{TODO: #1}}}
 \newcommand{\angolul}[1]{\foreignlanguage{english}{#1}}
+
+\newcommand{\todo}[1]{
+    \vfill
+    \begingroup % Csinálunk egy csoportot, hogy az identálás csak erre vonatkozzon
+        \setlength{\parindent}{0cm} % Beállítjuk, hogy teljes szélességű legyen a dobozunk a bekezdéstől függetlenül
+        \fcolorbox{todofrszin}{todobgszin}{
+            \parbox{\textwidth}{
+                \vskip10pt
+                \leftskip10pt
+                \rightskip10pt
+            
+                \emph{TODO: #1}
+  
+                \vskip10pt
+            }
+        }
+    \endgroup
+    \vfill
+}
 
 \newenvironment{sajat_itemize}
 {
@@ -95,23 +116,20 @@ A gyakorlat célja, hogy nagy vonalakban bemutassuk a vizuális adatelemzést é
 %------------------------------------------------------------------------------
 \section{A TPC benchmarkok}
 \subsection{A TPC benchmark}
-A TPC benchmarkokat a nonprofit \textit{Transaction Processing Performance Council} dolgozta ki, amelyek főleg web és adatbázis rendszerek teljesítményét hivatottak mérni. További információk: \href{http://www.tpc.org}{http://www.tpc.org}
+A TPC benchmarkokat a nonprofit \textit{Transaction Processing Performance Council} dolgozta ki, amelyek főleg web és adatbázis rendszerek teljesítményét hivatottak mérni. További információk: \url{http://www.tpc.org}
 \subsection{A TPC-C benchmark}
 A TPC-C benchmark egy összetett OLTP (On-line Transaction Processing) benchmark, amely különböző típusú és komplexitású konkurens tranzakciók percenkénti számát méri (tpmC).
 
 %------------------------------------------------------------------------------
 \section{Adattisztítás}
 
-\todo{Manuális és automatikus lehetőségek}
-
-Általában minden adatelemzést megelőz az adatok tisztítása. 
+Általában minden adatelemzést megelőz az adatok tisztítása.
 
 \subsection{Manuális adattisztítás}
 
-\todo{Mikor alkalmazható?}
+Kisméretű adathalmaz esetén akár kézzel is megtisztíthatjuk azt. Ehhez csak ismernünk kell az adatok jelentését, hogy miből származnak, milyen formátumban állnak rendelkezésre az egyes mezők. Egyszerűsödik a munka, ha olyan elrendezésben érhetőek el, hogy azt egy táblázatkezelő alkalmazásba tudjuk importálni. 
 
-Példának a TPC-C eredményein megyünk végig áttekintve ezzel az adattisztítás fontosabb lépéseit. Ezek az eredmények letölthetőek a TPC honlapjáról: \\ 
-\href{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}
+Mostani példánkban a TPC-C eredményeinek átalakításán megyünk végig, áttekintve ezzel az adattisztítás fontosabb lépéseit. Ezek az eredmények letölthetőek a TPC honlapjáról: \url{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}
 
 \todo{Screenshot a tisztítatlan adatokról}
 
@@ -143,6 +161,22 @@ A tisztítás lépései (csak hogy lássák, hogy mik a fontosabb lépések):
 \includegraphics[width=1.00\textwidth]{figures/tpc_cleaned.png}
 \caption{A tisztítatlan adathalmaz importálás után \label{fig:tpc_cleaned}}
 \end{figure}
+
+\subsection{Automatikus adattisztítás}
+
+\colorbox{todobgszin}{\parbox{\textwidth}{%
+  \vskip40pt
+  \leftskip10pt\rightskip10pt
+  
+  \begin{sajat_itemize}
+      \item nagy adathalmaza, esélytelen a kézi tisztítás
+      \item R vagy egyéb script/programozási nyelv alkalmazása
+      \item KNIME
+  \end{sajat_itemize}
+  
+  \vskip40pt
+ }
+}
 
 %------------------------------------------------------------------------------
 \section{Feladatok}
