@@ -93,4 +93,24 @@ A TPC benchmarkokat a nonprofit \textit{Transaction Processing Performance Counc
 \subsection{A TPC-C benchmark}
 A TPC-C benchmark egy összetett OLTP (On-line Transaction Processing) benchmark, amely különböző típusú és komplexitású konkurens tranzakciók percenkénti számát méri (tpmC).
 
+%------------------------------------------------------------------------------
+\section{Adattisztítás}
+
+\todo{Manuális és automatikus lehetőségek}
+
+Általában minden adatelemzést megelőz az adatok tisztítása. Példának a TPC-C eredményein megyünk végig áttekintve ezzel az adattisztítás fontosabb lépéseit. Ezek az eredmények letölthetőek a TPC honlapjáról: \href{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}
+
+\todo{Screenshot a tisztítatlan adatokról}
+
+A tisztítás lépései (csak hogy lássák, hogy mik a fontosabb lépések):
+\begin{sajat_itemize}
+\item importálás táblázatkezelőbe
+\item felesleges sorok eltávolítása
+\item felesleges oszlopok eltávolítása (itt pl. spec. revision, withdraw stb.)
+\item tizedespont vs. vessző átalakítások a számokat tartalmazó cellákban
+\item új származtatott oszlopok felvétele (itt pl. Price/Perf (USD) és Total Sys. Cost (USD))
+\item adatok aggregálása (itt pl. Database Software, Operating System)
+\item exportálás (esetünkben tabulált értékek, hogy a később bemutatásra kerülő Mondriánba tudjuk importálni)
+\end{sajat_itemize}
+
 \end{document}
