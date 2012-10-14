@@ -80,6 +80,9 @@
 \end{titlepage}
 \maketitle
 
+\tableofcontents
+\newpage
+
 \section{Bevezetés}
 
 A gyakorlat célja, hogy nagy vonalakban bemutassuk a vizuális adatelemzést és az ahhoz kapcsolódó előkészületeket, használható alkalmazásokat.
@@ -101,6 +104,12 @@ A TPC-C benchmark egy összetett OLTP (On-line Transaction Processing) benchmark
 Általában minden adatelemzést megelőz az adatok tisztítása. Példának a TPC-C eredményein megyünk végig áttekintve ezzel az adattisztítás fontosabb lépéseit. Ezek az eredmények letölthetőek a TPC honlapjáról: \href{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}
 
 \todo{Screenshot a tisztítatlan adatokról}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.90\textwidth]{figures/tpc_raw.png}
+\caption{A tisztítatlan adathalmaz importálás után \label{fig:tpc_raw}}
+\end{figure}
 
 A tisztítás lépései (csak hogy lássák, hogy mik a fontosabb lépések):
 \begin{sajat_itemize}
