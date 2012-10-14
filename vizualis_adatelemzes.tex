@@ -46,6 +46,9 @@
 
 \usepackage{ftsrgtemplate}
 
+\setlength{\parindent}{12pt} % magyar nyelvű dokumentumokban jellemző
+\setlength{\parskip}{0pt}    % magyar nyelvű dokumentumokban jellemző
+
 %###########################################
 % Saját eszközök:
 %
@@ -104,7 +107,12 @@
 \end{titlepage}
 \maketitle
 
-\tableofcontents
+% Nem akarom, hogy megjelenjen a tartalomjegyzékben a Tartalomjegyzék:
+\section*{Tartalomjegyzék}
+\makeatletter
+\@starttoc{toc}
+\makeatother
+
 \newpage
 
 \section{Bevezetés}
@@ -144,13 +152,15 @@ A segédlet további részében ezeket az eredményeket fogjuk felhasználni.
 
 Általában minden adatelemzést megelőz az adatok tisztítása.
 
+\todo{Bővíteni!}
+
 \subsection{Manuális adattisztítás}
 
 Kisméretű adathalmaz esetén akár kézzel is megtisztíthatjuk azt. Ehhez csak ismernünk kell az adatok jelentését, hogy miből származnak, milyen formátumban állnak rendelkezésre az egyes mezők. Egyszerűsödik a munka, ha olyan elrendezésben érhetőek el, hogy azt egy táblázatkezelő alkalmazásba tudjuk importálni. 
 
 Mostani példánkban a TPC-C eredményeinek átalakításán megyünk végig, áttekintve ezzel az adattisztítás fontosabb lépéseit. Ezek az eredmények letölthetőek a TPC honlapjáról: \url{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}
 
-\todo{Screenshot a tisztítatlan adatokról}
+\todo{Írjuk-e ezt le részletesen, lépésről-lépésre?}
 
 \Aref{fig:tpc_raw}.~ ábrán látható az adathalmazunk, miután importáltuk kedvenc táblázatkezelőnkbe.
 
@@ -160,7 +170,8 @@ Mostani példánkban a TPC-C eredményeinek átalakításán megyünk végig, á
 \caption{A tisztítatlan adathalmaz importálás után \label{fig:tpc_raw}}
 \end{figure}
 
-A tisztítás lépései (csak hogy lássák, hogy mik a fontosabb lépések):
+A tisztítás fontosabb lépései:
+
 \begin{sajat_itemize}
 \item importálás táblázatkezelőbe
 \item felesleges sorok eltávolítása
@@ -182,6 +193,10 @@ A tisztítás lépései (csak hogy lássák, hogy mik a fontosabb lépések):
 \end{figure}
 
 \subsection{Automatikus adattisztítás}
+
+Nagyobb méretű adathalmaz esetén nem alkalmazható a kézi tisztítás, ehelyett ilyenkor céleszközöket használunk.
+
+\todo{Bővíteni!}
 
 \colorbox{todobgszin}{\parbox{\textwidth}{%
   \vskip40pt
@@ -266,5 +281,9 @@ Jelöljük ki a \texttt{Company}, \texttt{tpmC}, \texttt{Price\_per\_Perf\_in\_U
 \subsubsection*{Megállapítások, megjegyzések}
 Az MSSQL fajlagosan (tmpC/USD) drága, de az összköltségük ezeknek a konfigurációknak alacsony. A Windows alapú rendszerek olcsóbbak, de rosszabb teljesítményt is nyújtanak. Az AIX operációs rendszerre csak DB2, Oracle és hatékonynak mondható adatbázis-kezelők vannak.
 A párhuzamos koordináták módszere arra is alkalmas, hogy szelektáljunk a változók között. Pl. a Currency oszlopnál látszik, hogy semmihez nincs köze. Fontos a változók sorrendje (pl. \texttt{Database\_Software}, \texttt{Operating\_System} egymás mellé érdemes helyezni).
+
+\section{Összefoglalás}
+
+\todo{Megírni!}
 
 \end{document}
