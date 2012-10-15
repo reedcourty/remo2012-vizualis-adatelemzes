@@ -23,6 +23,13 @@
 % Hogy legyen képünk:
 \usepackage{graphicx}
 
+%###############################################################################
+\newcommand{\szerzo}{Nádudvari György}
+\newcommand{\szerzomail}{ulqp9p@gmail}
+\newcommand{\cim}{Rendszermodellezés - 2. gyakorlat \\ Vizuális adatelemzés}
+\newcommand{\targy}{rendszermodellezés, vizuális adatelemzés}
+\newcommand{\kulcsszavak}{rendszermodellezés, vizuális adatelemzés, adattisztítás, Mondrian, TPC, TPC-C}
+
 \usepackage{hyperref}
 \hypersetup{
     unicode=true,
@@ -31,6 +38,12 @@
     citecolor=RoyalBlue,
     filecolor=RoyalBlue,
     urlcolor=RoyalBlue,
+    pdftitle={\cim},        % title
+    pdfauthor={\szerzo},    % author
+    pdfsubject={\targy}, % subject of the document
+    pdfcreator={},   % creator of the document
+    pdfproducer={LaTeX, TexMaker},    % producer of the document
+    pdfkeywords={\kulcsszavak},    % list of keywords
 }
 
 \usepackage{url}
@@ -101,7 +114,7 @@
   \vskip40pt
  }
 }}
-\author{Nádudvari György \\ < ulqp9p@gmail >}
+\author{\szerzo \\ < \szerzomail >}
 \date{\today}
 
 \end{titlepage}
