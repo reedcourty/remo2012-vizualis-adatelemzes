@@ -129,6 +129,7 @@
 %###############################################################################
 \newcommand{\oszlopnev}[1]{\fcolorbox{bone}{buff}{\texttt{#1}}}
 \newcommand{\menuelem}[1]{\fcolorbox{bone}{alice_blue}{\emph{#1}}}
+\newcommand{\billkomb}[1]{\textit{#1}}
 
 \newenvironment{sajat_itemize}
 {
@@ -307,7 +308,7 @@ Válasszuk ki az \oszlopnev{Availability\_Date\_year} oszlopot (egy kattintás a
 \caption{Az eredményhalmazban szereplő konfigurációk száma éves bontásban \label{fig:mondrian_Availability_Date_year_barchart}}
 \end{figure}
   
-\appcomment{\todo{Miért tér el a kijelölés színe}}
+\appcomment{A Mondrian alapbeállítása esetén a kijelölés színe a piros, ám ez a későbbiek során esetleg zavaró lehet ezért érdemes átállítani egy másik tetszőleges, jól látható színre. Ezt az \menuelem{Options $\rightarrow$ Preferences ... $\curvearrowright$ highlighting color} változtatásával tudjuk elkövetni.}
 
 \subsection{Az egyes beszállítók mely években voltak aktívak? Mely beszállító a nagy játékos?}
 \subsubsection*{Megoldás}
@@ -326,7 +327,7 @@ A HP minden évben adott ki konfigurációt (kivétel 2012, de még nincs vége 
 
 \subsection{Ha cégünk igényeit egy alacsonyabb teljesítményű konfigurációval is ki tudjuk elégíteni, akkor mely beszállítók közül válasszunk?}
 \subsubsection*{Megoldás}
-Nézzük meg a \emph{tpmC} eloszlását. Ehhez válasszuk ki a \oszlopnev{tpmC} oszlopot, majd \menuelem{Plot $\rightarrow$ Histogram}. A bal szélső oszlopra kattintva a \emph{Company} nézetén láthatjuk a szóba jöhető beszállítókat (\aref{fig:mondrian_tpmc_barchart_Company_barchart_low}.~ábra színezett része). A hisztogram bin szélességét a \textit{Ctrl + UP/DOWN} billentyűkkel módosíthatjuk.
+Nézzük meg a \emph{tpmC} eloszlását. Ehhez válasszuk ki a \oszlopnev{tpmC} oszlopot, majd \menuelem{Plot $\rightarrow$ Histogram}. A bal szélső oszlopra kattintva a \emph{Company} nézetén láthatjuk a szóba jöhető beszállítókat (\aref{fig:mondrian_tpmc_barchart_Company_barchart_low}.~ábra színezett része). A hisztogram bin szélességét a \billkomb{Ctrl + UP/DOWN} billentyűkkel módosíthatjuk.
 \subsubsection*{Megállapítások, megjegyzések}
 \Aref{fig:mondrian_tpmc_barchart}.~ábra jobb szélső oszlopa az Oracle csúcskategóriás klasztere.
 
@@ -341,7 +342,7 @@ Nézzük meg a \emph{tpmC} eloszlását. Ehhez válasszuk ki a \oszlopnev{tpmC} 
 
 \subsection{Mit lehet megállapítani a teljesítmény változásáról?}
 \subsubsection*{Megoldás}
-Válasszuk ki az \oszlopnev{Availability\_Date\_year} vagy \oszlopnev{Availability\_Date\_day}, majd a \oszlopnev{tpmC} oszlopokat, \menuelem{Plot $\rightarrow$ Scatterplot}.
+Válasszuk ki az \oszlopnev{Availability\_Date\_year} vagy \oszlopnev{Availability\_Date\_day}, majd a \oszlopnev{tpmC} oszlopokat (a \billkomb{Ctrl} gomb nyomva tartásával tudunk egyszerre több elemet kijelölni), \menuelem{Plot $\rightarrow$ Scatterplot}.
 \subsubsection*{Megállapítások, megjegyzések}
 Látható a teljesítmény növekedése, de néhány csúcsteljesítményű szerver kivételével inkább az alsó sávban helyezkednek el.
 
