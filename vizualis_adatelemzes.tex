@@ -72,6 +72,7 @@
 \definecolor{todofrszin}{rgb}{0.00,0.50,0.00}
 \definecolor{alice_blue}{rgb}{0.94,0.97,1.00}
 \definecolor{bone}{rgb}{0.89,0.85,0.79}
+\definecolor{eggshell}{rgb}{0.94,0.92,0.84}
 
 %\newcommand{\todo}[1]{\fcolorbox{todofrszin}{todobgszin}{\emph{TODO: #1}}}
 \newcommand{\angolul}[1]{\foreignlanguage{english}{#1}}
@@ -92,6 +93,33 @@
             }
         }
     \endgroup
+    \vfill
+}
+
+\newcommand{\appcomment}[1]{
+    \vfill
+    \begin{center}
+    \begingroup % Csinálunk egy csoportot, hogy az identálás csak erre vonatkozzon
+        \setlength{\parindent}{0cm} % Beállítjuk, hogy teljes szélességű legyen a dobozunk a bekezdéstől függetlenül
+        \setlength{\textwidth}{12cm}
+        \fcolorbox{bone}{eggshell}{
+            \parbox{\textwidth}{
+                \vskip5pt
+                \leftskip5pt
+                \rightskip5pt
+                
+                \small
+                
+                \textbf{Megjegyzés}
+                \newline           
+                                
+                #1
+  
+                \vskip5pt
+            }
+        }
+    \endgroup
+    \end{center}
     \vfill
 }
 
@@ -247,9 +275,9 @@ Nagyobb méretű adathalmaz esetén nem alkalmazható a kézi tisztítás, ehely
 Indítsuk el a Mondriant, majd \menuelem{File $\rightarrow$ Open}, és keressük meg a TPC-C eredményeit tartalmazó állományt (\textsl{tpcc.tsv}). Sikeres megnyitás utána \aref{fig:mondrian_tpcc_betoltve}.~ábrán látható mezőknek kell szerepelni az alkalmazás fő ablakában.
 Ezek után már elkezdhetjük az elemzést.
 
-\subsubsection*{Megjegyzés}
-
+\appcomment{
 Egyes adatforrások esetében előfordulhat, hogy a Mondrian tévesen határozza meg azok típusát (diszkrét/folytonos értékek). Ilyenkor nekünk kell azt helyesen beállítani az oszlopra történő dupla kattintással.
+}
 
 \begin{figure}[h!]
 \centering
@@ -259,11 +287,19 @@ Egyes adatforrások esetében előfordulhat, hogy a Mondrian tévesen határozza
 
 \subsection{Mely években megjelent konfigurációkat tartalmazza a benchmark? Mennyire használható/releváns napjainkban?}
 \subsubsection*{Megoldás}
-Válasszuk ki az \oszlopnev{Availability\_Date\_year} oszlopot (egy kattintás az oszlopra), majd \menuelem{Plot $\rightarrow$ Barchart}. Látható, hogy 2009-től megfogyatkozott a feltöltött eredmények száma.
+Válasszuk ki az \oszlopnev{Availability\_Date\_year} oszlopot (egy kattintás az oszlopra), majd \menuelem{Plot $\rightarrow$ Barchart}. \Aref{fig:mondrian_Availability_Date_year_barchart}.~ábrán látható, hogy 2009-től megfogyatkozott a feltöltött eredmények száma.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_barchart.png}
+\caption{Az eredményhalmazban szereplő konfigurációk száma éves bontásban \label{fig:mondrian_Availability_Date_year_barchart}}
+\end{figure}
+  
+\appcomment{\todo{Miért tér el a kijelölés színe}}
 
 \subsection{Az egyes beszállítók mely években voltak aktívak? Mely beszállító a nagy játékos?}
 \subsubsection*{Megoldás}
-Válasszuk ki a \texttt{Company} oszlopot, majd Plot $\rightarrow$ Barchart. Az egyes beszállítók neveire kattintva az éveket tartalmazó ablakban láthatjuk az aktív éveket.
+Válasszuk ki a \oszlopnev{Company} oszlopot, majd \menuelem{Plot $\rightarrow$ Barchart}. Az egyes beszállítók neveire kattintva az éveket tartalmazó ablakban láthatjuk az aktív éveket.
 \subsubsection*{Megállapítások, megjegyzések}
 A HP minden évben adott ki konfigurációt (kivétel 2012, de még nincs vége az évnek), az Oracle csak az utóbbi két évben.
 
