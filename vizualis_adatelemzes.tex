@@ -314,9 +314,18 @@ A HP minden évben adott ki konfigurációt (kivétel 2012, de még nincs vége 
 
 \subsection{Ha cégünk igényeit egy alacsonyabb teljesítményű konfigurációval is ki tudjuk elégíteni, akkor mely beszállítók közül válasszunk?}
 \subsubsection*{Megoldás}
-Nézzük meg a tpmC eloszlását. Ehhez válasszuk ki a \texttt{tpmC} oszlopot, majd Plot $\rightarrow$ Histogram. A bal szélső oszlopra kattintva a Company nézetén láthatjuk a szóba jöhető beszállítókat. A hisztogram bin szélességét a \textit{Ctrl + UP/DOWN} billentyűkkel módosíthatjuk.
+Nézzük meg a \emph{tpmC} eloszlását. Ehhez válasszuk ki a \oszlopnev{tpmC} oszlopot, majd \menuelem{Plot $\rightarrow$ Histogram}. A bal szélső oszlopra kattintva a \emph{Company} nézetén láthatjuk a szóba jöhető beszállítókat (\aref{fig:mondrian_tpmc_barchart_Company_barchart_low}.~ábra színezett része). A hisztogram bin szélességét a \textit{Ctrl + UP/DOWN} billentyűkkel módosíthatjuk.
 \subsubsection*{Megállapítások, megjegyzések}
-A jobb szélső oszlop az Oracle csúcskategóriás klasztere.
+\Aref{fig:mondrian_tpmc_barchart}.~ábra jobb szélső oszlopa az Oracle csúcskategóriás klasztere.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Az teljesítmények eloszlás módosított bin szélesség után]{\label{fig:mondrian_tpmc_barchart}\includegraphics[width=0.30\textwidth]{figures/mondrian_tpmc_barchart.png}}
+  ~~~~~ % Térköz az ábrák között.
+  \subfloat[A beszállítók]{\label{fig:mondrian_tpmc_barchart_Company_barchart_low}\includegraphics[width=0.30\textwidth]{figures/mondrian_tpmc_barchart_Company_barchart_low.png}}
+  \caption{Az egyes beszállítók teljesítménye}
+  \label{fig:beszallitok_teljesitmenye}
+\end{figure}
 
 \subsection{Mit lehet megállapítani a teljesítmény változásáról?}
 \subsubsection*{Megoldás}
