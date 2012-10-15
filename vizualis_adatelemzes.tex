@@ -359,14 +359,9 @@ Illesszünk regressziós görbét a pontokra. Az \oszlopnev{Availability\_Date\_
   \label{fig:beszallitok_teljesitmenye}
 \end{figure}
 
+\appcomment{A Mondrián -- mint ahogy az már korábban említésre került --, képes az R környezethez kapcsolódni, amennyiben az \emph{RServe} (A projekt honlapja: \url{http://rforge.net/Rserve/}) csomag telepítve van. Ennek hiánya esetén csak az LS-line funkció érhető el a regressziós görbe típusok közül, mivel a többi megvalósításához bonyolultabb számítások szükségesek.}
 
-\todo{RServe hiánya esetén csak ez megy}
-
-\todo{Többi simítógörbét megmutatni}
-
-\appcomment{
-Ha valamelyik pont fölé visszük a kurzort és közben nyomva tartjuk a Ctrl-t akkor kiírja a ponthoz tartozó értékeket.
-}
+\appcomment{Ha valamelyik pont fölé visszük a kurzort és közben nyomva tartjuk a \billkomb{Ctrl}-t akkor kiírja a ponthoz tartozó értékeket.}
 
 \subsubsection*{Ugyanez Boxplot alkalmazásával}
 Válasszuk ki az \texttt{Availability\_Date\_year}, majd a \texttt{tpmC} oszlopokat, Plot $\rightarrow$ Boxplot y by x. Megfigyelhető a mediánok értékének növekedése.
