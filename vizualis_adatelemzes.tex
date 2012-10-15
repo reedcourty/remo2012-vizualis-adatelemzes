@@ -57,6 +57,9 @@
 \usepackage{subfig}
 \usepackage{verbatim} % Hogy lehessen blokkkommentezni
 
+% Egymás melleti képekhez:
+\usepackage{subfig}
+
 \usepackage{ftsrgtemplate}
 
 \setlength{\parindent}{12pt} % magyar nyelvű dokumentumokban jellemző
@@ -89,6 +92,11 @@
     \endgroup
     \vfill
 }
+
+
+%###############################################################################
+\newcommand{\oszlopnev}[1]{\texttt{#1}}
+\newcommand{\menuelem}[1]{\emph{#1}}
 
 \newenvironment{sajat_itemize}
 {
@@ -225,12 +233,27 @@ Nagyobb méretű adathalmaz esetén nem alkalmazható a kézi tisztítás, ehely
  }
 }
 
+\section{Mondrian}
+
+\todo{Leírás róla, hogy mi is ez}
+
 %------------------------------------------------------------------------------
 \section{Feladatok}
 
+\subsection{Adatok betöltés a Mondrian alkalmazásba}
+
+Indítsuk el a Mondriant, majd \menuelem{File $\rightarrow$ Open}, és keressük meg a TPC-C eredményeit tartalmazó állományt (\textsl{tpcc.tsv}). Sikeres megnyitás utána \aref{fig:mondrian_tpcc_betoltve}.~ ábrán látható mezőknek kell szerepelni az alkalmazás fő ablakában.
+Ezek után már elkezdhetjük az elemzést.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.30\textwidth]{figures/mondrian_tpcc_betoltve.png}
+\caption{A Mondrianba betöltött adathalmaz oszlopai \label{fig:mondrian_tpcc_betoltve}}
+\end{figure}
+
 \subsection{Mely években megjelent konfigurációkat tartalmazza a benchmark? Mennyire használható/releváns napjainkban?}
 \subsubsection*{Megoldás}
-Válasszuk ki az \texttt{Availability\_Date\_year} oszlopot, majd Plot $\rightarrow$ Barchart. Látható, hogy 2009-től megfogyatkozott a feltöltött eredmények száma.
+Válasszuk ki az \oszlopnev{Availability\_Date\_year} oszlopot, majd \menuelem{Plot $\rightarrow$ Barchart}. Látható, hogy 2009-től megfogyatkozott a feltöltött eredmények száma.
 
 \subsection{Az egyes beszállítók mely években voltak aktívak? Mely beszállító a nagy játékos?}
 \subsubsection*{Megoldás}
