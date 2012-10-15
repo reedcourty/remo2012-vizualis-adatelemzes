@@ -329,15 +329,32 @@ Nézzük meg a \emph{tpmC} eloszlását. Ehhez válasszuk ki a \oszlopnev{tpmC} 
 
 \subsection{Mit lehet megállapítani a teljesítmény változásáról?}
 \subsubsection*{Megoldás}
-Válasszuk ki az \texttt{Availability\_Date\_year} vagy \texttt{Availability\_Date\_day}, majd a \texttt{tpmC} oszlopokat, Plot $\rightarrow$ Scatterplot.
+Válasszuk ki az \oszlopnev{Availability\_Date\_year} vagy \oszlopnev{Availability\_Date\_day}, majd a \oszlopnev{tpmC} oszlopokat, \menuelem{Plot $\rightarrow$ Scatterplot}.
 \subsubsection*{Megállapítások, megjegyzések}
-Látható a teljesítmény növekedése, de néhány csúcsteljesítményű szerver kivételével inkább az alsó sávban helyezkednek el. Illesszünk regressziós görbét a pontokra. Az \texttt{Availability\_Date\_year - tpmC} scatterplotra jobb gombbal kattintva smoothers $\rightarrow$ ls-line. 
+Látható a teljesítmény növekedése, de néhány csúcsteljesítményű szerver kivételével inkább az alsó sávban helyezkednek el.
+
+Illesszünk regressziós görbét a pontokra. Az \oszlopnev{Availability\_Date\_year - tpmC} scatterplotra jobb gombbal kattintva \menuelem{smoothers $\rightarrow$ ls-line}. \Aref{fig:mondrian_Availability_Date_day_tpmC_scatterplot_ls_line}.~ábra jobb alsó sarkában látható egy lineáris egyenes, amely az LS-line regressziós függvény eredménye, míg \aref{fig:mondrian_Availability_Date_day_tpmC_scatterplot_splines}.~ábrán egy másik algoritmus kimenete látható.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Idő - tpmc pontdiagram]{\label{fig:mondrian_Availability_Date_day_tpmC_scatterplot}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_day_tpmC_scatterplot.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[LS-line regressziós görbe alkalmazása]{\label{fig:mondrian_Availability_Date_day_tpmC_scatterplot_ls_line}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_day_tpmC_scatterplot_ls_line.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[Splines regressziós görbe alkalmazása]{\label{fig:mondrian_Availability_Date_day_tpmC_scatterplot_splines}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_day_tpmC_scatterplot_splines.png}}
+  \caption{A teljesítmények változása az idő haladtával}
+  \label{fig:beszallitok_teljesitmenye}
+\end{figure}
+
 
 \todo{RServe hiánya esetén csak ez megy}
 
 \todo{Többi simítógörbét megmutatni}
 
+\appcomment{
 Ha valamelyik pont fölé visszük a kurzort és közben nyomva tartjuk a Ctrl-t akkor kiírja a ponthoz tartozó értékeket.
+}
+
 \subsubsection*{Ugyanez Boxplot alkalmazásával}
 Válasszuk ki az \texttt{Availability\_Date\_year}, majd a \texttt{tpmC} oszlopokat, Plot $\rightarrow$ Boxplot y by x. Megfigyelhető a mediánok értékének növekedése.
 
