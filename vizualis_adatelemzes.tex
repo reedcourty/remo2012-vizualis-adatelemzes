@@ -301,7 +301,16 @@ Válasszuk ki az \oszlopnev{Availability\_Date\_year} oszlopot (egy kattintás a
 \subsubsection*{Megoldás}
 Válasszuk ki a \oszlopnev{Company} oszlopot, majd \menuelem{Plot $\rightarrow$ Barchart}. Az egyes beszállítók neveire kattintva az éveket tartalmazó ablakban láthatjuk az aktív éveket.
 \subsubsection*{Megállapítások, megjegyzések}
-A HP minden évben adott ki konfigurációt (kivétel 2012, de még nincs vége az évnek), az Oracle csak az utóbbi két évben.
+A HP minden évben adott ki konfigurációt (kivétel 2012, de még nincs vége az évnek), ahogy az \aref{fig:mondrian_Availability_Date_year_barchart_Company_barchart_HP}.~ábrán is látható, míg az Oracle csak az utóbbi két évben\footnote{Persze itt ez a megállapítás sántít. Előfordulhat, hogy minden beszállító minden évben piacra dobott új termékeket, ám azok eredményeit nem küldte be a TPC adatbázisába.}.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Az egyes beszállítók eloszlása]{\label{fig:mondrian_Company_barchart}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_barchart.png}}
+  ~~~~~ % Térköz az ábrák között.
+  \subfloat[A HP aktív évei]{\label{fig:mondrian_Availability_Date_year_barchart_Company_barchart_HP}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_barchart_Company_barchart_HP.png}}
+  \caption{Az egyes beszállítók aktivitása}
+  \label{fig:beszallitok_aktivitasa}
+\end{figure}
 
 \subsection{Ha cégünk igényeit egy alacsonyabb teljesítményű konfigurációval is ki tudjuk elégíteni, akkor mely beszállítók közül válasszunk?}
 \subsubsection*{Megoldás}
