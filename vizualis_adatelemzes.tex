@@ -70,6 +70,8 @@
 %
 \definecolor{todobgszin}{rgb}{0.64,0.78,0.22}
 \definecolor{todofrszin}{rgb}{0.00,0.50,0.00}
+\definecolor{alice_blue}{rgb}{0.94,0.97,1.00}
+\definecolor{bone}{rgb}{0.89,0.85,0.79}
 
 %\newcommand{\todo}[1]{\fcolorbox{todofrszin}{todobgszin}{\emph{TODO: #1}}}
 \newcommand{\angolul}[1]{\foreignlanguage{english}{#1}}
@@ -96,7 +98,7 @@
 
 %###############################################################################
 \newcommand{\oszlopnev}[1]{\texttt{#1}}
-\newcommand{\menuelem}[1]{\emph{#1}}
+\newcommand{\menuelem}[1]{\fcolorbox{bone}{alice_blue}{\emph{#1}}}
 
 \newenvironment{sajat_itemize}
 {
@@ -118,7 +120,7 @@
 \title{\colorbox{ftsrg_color}{\parbox{\textwidth}{%
   \vskip40pt
   \leftskip10pt\rightskip10pt
-  \center{\color{white}{Rendszermodellezés - 2. gyakorlat \\ Vizuális adatelemzés}}
+  \center{\textcolor{white}{Rendszermodellezés - 2. gyakorlat \\ Vizuális adatelemzés}}
   \vskip40pt
  }
 }}
@@ -245,6 +247,10 @@ Nagyobb méretű adathalmaz esetén nem alkalmazható a kézi tisztítás, ehely
 Indítsuk el a Mondriant, majd \menuelem{File $\rightarrow$ Open}, és keressük meg a TPC-C eredményeit tartalmazó állományt (\textsl{tpcc.tsv}). Sikeres megnyitás utána \aref{fig:mondrian_tpcc_betoltve}.~ábrán látható mezőknek kell szerepelni az alkalmazás fő ablakában.
 Ezek után már elkezdhetjük az elemzést.
 
+\subsubsection*{Megjegyzés}
+
+Egyes adatforrások esetében előfordulhat, hogy a Mondrian tévesen határozza meg azok típusát (diszkrét/folytonos értékek). Ilyenkor nekünk kell azt helyesen beállítani az oszlopra történő dupla kattintással.
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.30\textwidth]{figures/mondrian_tpcc_betoltve.png}
@@ -253,7 +259,7 @@ Ezek után már elkezdhetjük az elemzést.
 
 \subsection{Mely években megjelent konfigurációkat tartalmazza a benchmark? Mennyire használható/releváns napjainkban?}
 \subsubsection*{Megoldás}
-Válasszuk ki az \oszlopnev{Availability\_Date\_year} oszlopot, majd \menuelem{Plot $\rightarrow$ Barchart}. Látható, hogy 2009-től megfogyatkozott a feltöltött eredmények száma.
+Válasszuk ki az \oszlopnev{Availability\_Date\_year} oszlopot (egy kattintás az oszlopra), majd \menuelem{Plot $\rightarrow$ Barchart}. Látható, hogy 2009-től megfogyatkozott a feltöltött eredmények száma.
 
 \subsection{Az egyes beszállítók mely években voltak aktívak? Mely beszállító a nagy játékos?}
 \subsubsection*{Megoldás}
