@@ -59,10 +59,13 @@
 % Egymás melleti képekhez:
 \usepackage{subfig}
 
+% Használjuk a tanszéki sablont:
 \usepackage{ftsrgtemplate}
 
 \setlength{\parindent}{12pt} % magyar nyelvű dokumentumokban jellemző
 \setlength{\parskip}{0pt}    % magyar nyelvű dokumentumokban jellemző
+
+\usepackage{setspace}  % Ettol a tablazatok, abrak, labjegyzetek maradnak 1-es sorkozzel!
 
 %###########################################
 % Saját eszközök:
@@ -98,7 +101,6 @@
 }
 
 \newcommand{\appcomment}[1]{
-    \vfill
     \begin{center}
     \begingroup % Csinálunk egy csoportot, hogy az identálás csak erre vonatkozzon
         \setlength{\parindent}{0cm} % Beállítjuk, hogy teljes szélességű legyen a dobozunk a bekezdéstől függetlenül
@@ -121,7 +123,6 @@
         }
     \endgroup
     \end{center}
-    \vfill
 }
 
 
@@ -267,13 +268,13 @@ Az egyik lehetőség a szkript vagy programozási nyelvek használata, mint pl. 
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=1.00\textwidth]{figures/RStudio.png}
+\includegraphics[width=0.80\textwidth]{figures/RStudio.png}
 \caption{RStudio, az R nyelv egyik fejlesztőkörnyezete \label{fig:RStudio}}
 \end{figure}
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=1.00\textwidth]{figures/knime.png}
+\includegraphics[width=0.80\textwidth]{figures/knime.png}
 \caption{A KNIME adatfeldolgozó rendszer \label{fig:knime}}
 \end{figure}
 
