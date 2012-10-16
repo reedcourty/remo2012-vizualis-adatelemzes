@@ -172,7 +172,11 @@
 
 A gyakorlat célja, hogy nagy vonalakban bemutassuk a vizuális adatelemzést és az ahhoz kapcsolódó előkészületeket, használható alkalmazásokat.
 
-\todo{Bővíteni!}
+Jogosan merült fel a kérdés, hogy mégis mi köze van az adatelemzésnek a Rendszermodellezés tárgyhoz. Egy rendszer modellezése után gyakran kerülhetünk olyan helyzetbe, hogy annak teljesítményét, vagy egyéb paramétereit meg kell mérnünk, és azokból következtetéseket kell levonnunk, vagy esetleg más modellekből kapott eredményekkel kell összehasonlítanunk. Ilyenkor jól jöhet a lényeges paraméterek meghatározása, hogy pontosan mit is mértünk, milyen összefüggések vannak az egyes változók között és hogy miért az jellemzi a legjobban a rendszerünket.
+
+Ez a segédlet igyekszik összeszedni az ezzel kapcsolatos alapvető dolgokat, mint amilyen az adattisztítás, vizuális adatelemzés, és példákon keresztül megmutatja, hogy hogyan is lehet ezt a tudást a gyakorlatban is használni.
+
+A segédletnek nem célja, hogy összeszedje, átismételje az előadáson az adatelemzéssel kapcsolatos információkat, de ugyanakkor csak néhány diagram típus ismeretének meglétét feltételezi (vagyis a hallgató legyen tisztában a pontdiagram, dobozdiagram stb. tulajdonságaival, és felhasználási lehetőségeivel). 
 
 %------------------------------------------------------------------------------
 \section{Benchmarking}
@@ -275,7 +279,19 @@ Az egyik lehetőség a szkript vagy programozási nyelvek használata, mint pl. 
 
 \section{Mondrian}
 
-\todo{Leírás róla, hogy mi is ez}
+A Mondrian\footnote{\url{http://www.rosuda.org/Mondrian/}} egy általános használatú statisztikai adatvizualizációs, Java nyelven íródott, nyílt forráskódú, ingyenes (GNU GPL 3+) alkalmazás.
+
+Előnye más hasonló alkalmazásokkal szemben, hogy egy interaktív felületet nyújt, amelyen az egyes grafikonok teljesen össze vannak kötve, így az egyiken kijelölt értékeket a másik ábrán is egyből kiemeli, megkönnyítve ezzel az adatok közötti összefüggések elemzését.
+
+Alapvetően tabbal vagy vesszővel szeparált adatforrásokat (TSV, CSV állományok) tud beolvasni, de képes az R által használt RData-k kezelésére is. Alaptámogatással rendelkezik néhány adatbázis elérésére is.
+
+A program képes kapcsolatot létesíteni az R fejlesztőeszközzel is, amellyel így statisztikai képességekkel egészül ki (pl. regressziós algoritmusok, MDS, PCA eljárások).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.40\textwidth]{figures/mondrian_app.png}
+\caption{A Mondrian felülete \label{fig:mondrian_app}}
+\end{figure}
 
 %------------------------------------------------------------------------------
 \section{Feladatok}
@@ -422,6 +438,8 @@ Az \oszlopnev{Operating\_System} oszlopból készítsünk egy barchartot, majd a
 \subsubsection*{Megállapítások, megjegyzések}
 Az \emph{Availability\_Date\_year} - \emph{tpmC} pontdiagramon kijelölve a felső pontokat látható, hogy a legnagyobb teljesítményt nyújtó gépeken \emph{Unix/Linux} variánsok futnak (\ref{fig:tpmc_felso_kategoria_os}.~ábra), míg az \emph{Operating\_System} barcharton a \emph{Windows}-ra kattintva láthatjuk a \emph{tpmC} ábráján, hogy ezen konfigurációk teljesítménye nem a legjobb.
 
+\appcomment{A \billkomb{Shift} lenyomásával akár egyesével is kijelölhetünk pontokat a pontdiagramon, vagy egy újabb kattintással eltávolíthatjuk a kijelölésből.}
+
 \begin{figure}[h!]
   \centering
   \subfloat[Évek - teljesítmény, kiemelve a nagy teljesítményű konfigurációk]{\label{fig:mondrian_Availability_Date_year_tpmC_scatterplot_felso_konfigok}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_tpmC_scatterplot_felso_konfigok.png}}
@@ -484,6 +502,6 @@ A párhuzamos koordináták módszere arra is alkalmas, hogy szelektáljunk a v�
 
 \section{Összefoglalás}
 
-\todo{Megírni!}
+Az előző néhány oldalban összefoglaltuk az adattisztítás fontosabb típusai, lépéseit. Bemutattunk néhány céleszközt, és egy benchmark típus segítségével, feladatokon végigmenve megmutattuk a vizuális adatelemzést a Mondrian nevű alkalmazás használatával.
 
 \end{document}
