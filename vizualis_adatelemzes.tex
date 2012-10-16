@@ -436,7 +436,18 @@ Az \emph{Availability\_Date\_year} - \emph{tpmC} pontdiagramon kijelölve a fels
 
 \subsection{Melyik beszállító melyik adatbázis-kezelőben és operációs rendszerben ,,utazik''?}
 \subsubsection*{Megoldás}
-A már meglévő \texttt{Operating\_System}, \texttt{Database\_Software} és \texttt{Company} barchartok esetén a beszállítókat végig kattintgatva megvizsgálhatjuk, hogy mely OS-eket és DBMS-eket preferálják.
+A már meglévő \emph{Operating\_System}, \emph{Database\_Software} és \emph{Company} barchartok esetén a beszállítókat végig kattintgatva megvizsgálhatjuk, hogy mely OS-eket és DBMS-eket preferálják. \Aref{fig:company_os_dbms}.~ábráról leolvashatjuk, hogy a HP esetében a Windows operációs rendszereket és az MS SQL adatbázis megvalósításokat preferálják.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Beszállítók, HP kiválasztva]{\label{fig:mondrian_Company_barchart_HP_selected}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_barchart_HP_selected.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[A HP által preferált operációs rendszerek]{\label{fig:mondrian_Operating_System_barchart_HP_selected}\includegraphics[width=0.30\textwidth]{figures/mondrian_Operating_System_barchart_HP_selected.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[A HP által preferált adatbázis-kezelő rendszerek]{\label{fig:mondrian_Database_Software_barchart_HP_selected}\includegraphics[width=0.30\textwidth]{figures/mondrian_Database_Software_barchart_HP_selected.png}}
+  \caption{Beszállítók által preferált OS-ek és DBMS-ek}
+  \label{fig:company_os_dbms}
+\end{figure}
 
 \subsection{Melyik beszállítót, adatbázis-kezelőt és operációs rendszert tartalmazza a leggyakrabban az adathalmaz?}
 \subsubsection*{Megoldás}
