@@ -396,9 +396,18 @@ Ha a \emph{tpmC} ábrán kijelöljük a felső néhány pontot, akkor megállap�
 
 \subsection{Milyen adatbázis-kezelő szoftvert válasszunk, ha még mindig az olcsóbb megoldást szeretnénk használni?}
 \subsubsection*{Megoldás}
-Válasszuk ki a \texttt{Database\_Software} oszlopot, majd Plot $\rightarrow$ Barchart. A teljes költséget ábrázoló ploton jelöljük ki az alsó pontokat.
+Válasszuk ki a \oszlopnev{Database\_Software} oszlopot, majd \menuelem{Plot $\rightarrow$ Barchart}. A teljes költséget ábrázoló ploton jelöljük ki az alsó pontokat.
 \subsubsection*{Megállapítások, megjegyzések}
-Jól látható, hogy az MS SQL-es konfigurációk inkább az alsó és középső árkategóriákat fedik le, míg a felső kategória az Oracle-re és IBM-re jellemző.
+\Aref{fig:alacsony_TC_adatbazisok}.~ábrán jól látható, hogy melyek azok az adatbázisok, amelyek megfelelnek a választási feltételünknek. Ha egyesével kijelöljük az adatbázisokat a megfelelő grafikonon, akkor megállapítható, hogy az \emph{MS SQL}-es konfigurációk inkább az alsó és középső árkategóriákat fedik le, míg a felső kategória az \emph{Oracle}-re és \emph{IBM}-re jellemző.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Évek - teljes költség, kiemelve az alacsony költségű konfigurációk]{\label{fig:mondrian_Availability_Date_year_Total_Sys_Cost_in_USD_also_pontok}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_Total_Sys_Cost_in_USD_also_pontok.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[Az alacsony teljes költségű konfigurációk adatbázisai]{\label{fig:mondrian_Company_barchart_TC_also_kategoria}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_barchart_TC_also_kategoria.png}}
+  \caption{Olcsó konfigurációk adatbázisai}
+  \label{fig:alacsony_TC_adatbazisok}
+\end{figure}
 
 \subsection{Milyen operációs rendszert válasszunk, ha a teljes költséget minimalizálni akarjuk?}
 \subsubsection*{Megoldás}
