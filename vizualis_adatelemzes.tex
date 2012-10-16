@@ -411,7 +411,19 @@ Válasszuk ki a \oszlopnev{Database\_Software} oszlopot, majd \menuelem{Plot $\r
 
 \subsection{Milyen operációs rendszert válasszunk, ha a teljes költséget minimalizálni akarjuk?}
 \subsubsection*{Megoldás}
-Az \texttt{Operating\_System} oszlopból készítsünk egy barchartot, majd az \texttt{Availability\_Date\_year} - \\ \texttt{Total\_Sys\_Cost\_in\_USD} scatterploton jelöljük ki az alsó pontokat. Látható, hogy főleg az MS Windows-os és Oracle Enterprise Linux-os konfigurációk a legolcsóbbak a teljes költséget nézve.
+Az \oszlopnev{Operating\_System} oszlopból készítsünk egy barchartot, majd az \emph{Availability\_Date\_year} - \\ \emph{Total\_Sys\_Cost\_in\_USD} scatterploton jelöljük ki az alsó pontokat. Látható \aref{fig:alacsony_TC_operacios_rendszerek}.~ábrán, hogy főleg az \emph{MS Windows}-os és \emph{Oracle Enterprise Linux}-os konfigurációk a legolcsóbbak a teljes költséget nézve.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Évek - teljes költség, kiemelve az alacsony költségű konfigurációk]{\label{fig:mondrian_Availability_Date_year_Total_Sys_Cost_in_USD_also_pontok}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_Total_Sys_Cost_in_USD_also_pontok.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[Az alacsony teljes költségű konfigurációk operációs rendszerei]{\label{fig:mondrian_Operating_System_barchart_also_kategoria}\includegraphics[width=0.30\textwidth]{figures/mondrian_Operating_System_barchart_also_kategoria.png}}
+  \caption{Olcsó konfigurációk operációs rendszerei}
+  \label{fig:alacsony_TC_operacios_rendszerek}
+\end{figure}
+
+\todo{Itt tartok!}
+
 \subsubsection*{Megállapítások, megjegyzések}
 Az \texttt{Availability\_Date\_year} - \texttt{tpmC} scatterploton kijelölve a felső pontokat látható, hogy a legnagyobb teljesítményt nyújtó gépeken Unix/Linux variánsok futnak, míg az \texttt{Operating\_System} barcharton a Windows-ra kattintva láthatjuk a tpmC ábráján, hogy ezen konfigurációk teljesítménye nem a legjobb.
 
