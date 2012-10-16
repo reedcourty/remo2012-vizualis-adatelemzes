@@ -374,12 +374,25 @@ Válasszuk ki az \oszlopnev{Availability\_Date\_year}, majd a \oszlopnev{tpmC} o
 
 \subsection{Hogyan alakulnak a tranzakciós és összköltségek?}
 \subsubsection*{Megoldás}
-Válasszuk ki az \texttt{Availability\_Date\_year}, majd a \texttt{Price\_per\_Perf\_in\_USD} oszlopokat, Plot $\rightarrow$ Scatterplot. Ezután az \texttt{Availability\_Date\_year}, \texttt{Total\_Sys\_Cost\_in\_USD} párost hasonló módon. Tegyünk regressziós görbét az ábrákra!
-\todo{Leírni, hogyan tegyük oda a görbét!}
-\todo{Kijelölés után változik a regressziós görbe, erről ábrát, szöveget!}
-Láthatjuk, hogy a tranzakciós költségek csökkennek, viszont a teljes költségek inkább növekednek.
+Válasszuk ki az \oszlopnev{Availability\_Date\_year}, majd a \oszlopnev{Price\_per\_Perf\_in\_USD} oszlopokat, \menuelem{Plot $\rightarrow$ Scatterplot}. Ezután az \oszlopnev{Availability\_Date\_year}, \oszlopnev{Total\_Sys\_Cost\_in\_USD} párost hasonló módon. Tegyünk regressziós görbét az ábrákra (jobb klikk az \emph{Availability\_Date\_year - Price\_per\_Perf\_in\_USD} grafikonra, és például \menuelem{smoothers $\rightarrow$ splines})!
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Beszállítók, kiemelve az IBM]{\label{fig:mondrian_Company_ADY_P_and_T_IBM}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_ADY_P_and_T_IBM.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[Évek - teljesítmény alapú költség, kiemelve az IBM]{\label{fig:mondrian_Availability_Date_year_Price_per_Perf_in_USD_splines}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_Price_per_Perf_in_USD_splines.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[Évek - teljes költség, kiemelve az IBM]{\label{fig:mondrian_Availability_Date_year_Total_Sys_Cost_in_USD_splines}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_Total_Sys_Cost_in_USD_splines.png}}
+  \caption{A költségek alakulása az idő haladtával}
+  \label{fig:koltsegek_alakulasa}
+\end{figure}
+
+\Aref{fig:koltsegek_alakulasa}.~ábrán láthatjuk, hogy a tranzakciós költségek csökkennek, viszont a teljes költségek inkább növekednek.
+
+\appcomment{Tetszőleges kijelölés után a Mondrian újraszámolja a regressziós görbéket a kijelölt pontok alapján, és a kijelölés színével megjeleníti azt a grafikonon.}
+
 \subsubsection*{Megállapítások, megjegyzések}
-Ha a tpmC ábrán kijelöljük a felső néhány pontot, akkor megállapíthatjuk, hogy a teljes költségek ugyan magasak, de a teljesítmény/ár arány még mindig jónak számít.
+Ha a \emph{tpmC} ábrán kijelöljük a felső néhány pontot, akkor megállapíthatjuk, hogy a teljes költségek ugyan magasak, de a teljesítmény/ár arány még mindig jónak számít.
 
 \subsection{Milyen adatbázis-kezelő szoftvert válasszunk, ha még mindig az olcsóbb megoldást szeretnénk használni?}
 \subsubsection*{Megoldás}
