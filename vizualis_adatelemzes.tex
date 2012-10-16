@@ -470,13 +470,20 @@ A legnagyobb téglalapot a \emph{HP} - \emph{MS Windows} - \emph{MS SQL} hármas
   \label{fig:legnagyobb_company_os_dbms}
 \end{figure}
 
-
 \subsection{Próbáljunk összefüggést találni a teljesítmények, költségek, operációs rendszerek és adatbázis-kezelők között!}
 \subsubsection*{Megoldás}
-Jelöljük ki a \texttt{Company}, \texttt{tpmC}, \texttt{Price\_per\_Perf\_in\_USD}, \texttt{Total\_Sys\_Cost\_in\_USD}, \\ \texttt{Database\_Software},  \texttt{Operating\_System} és \texttt{Currency} oszlopokat, majd Plot $\rightarrow$ Parallel Coordinates.
+Jelöljük ki a \oszlopnev{Company}, \oszlopnev{tpmC}, \oszlopnev{Price\_per\_Perf\_in\_USD}, \oszlopnev{Total\_Sys\_Cost\_in\_USD}, \\ \oszlopnev{Database\_Software},  \oszlopnev{Operating\_System} és \oszlopnev{Currency} oszlopokat (ebben a sorrendben!),\\ majd \menuelem{Plot $\rightarrow$ Parallel Coordinates}. \Aref{fig:mondrian_parallel_coordinates_osszefuggesek}.~ábrán az előző feladatban alkalmazott kijelölés látható (\emph{HP}, \emph{MS Windows}, \emph{MS SQL} és az azokhoz tartozó költség és teljesítmény jellemzők).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1.00\textwidth]{figures/mondrian_parallel_coordinates_osszefuggesek.png}
+\caption{Párhuzamos koordináták az adathalmaz változóiból \label{fig:mondrian_parallel_coordinates_osszefuggesek}}
+\end{figure}
+
 \subsubsection*{Megállapítások, megjegyzések}
-Az MSSQL fajlagosan (tmpC/USD) drága, de az összköltségük ezeknek a konfigurációknak alacsony. A Windows alapú rendszerek olcsóbbak, de rosszabb teljesítményt is nyújtanak. Az AIX operációs rendszerre csak DB2, Oracle és hatékonynak mondható adatbázis-kezelők vannak.
-A párhuzamos koordináták módszere arra is alkalmas, hogy szelektáljunk a változók között. Pl. a Currency oszlopnál látszik, hogy semmihez nincs köze. Fontos a változók sorrendje (pl. \texttt{Database\_Software}, \texttt{Operating\_System} egymás mellé érdemes helyezni).
+Az \emph{MSSQL} fajlagosan (tmpC/USD) drága, de az összköltségük ezeknek a konfigurációknak alacsony. A \emph{Windows} alapú rendszerek olcsóbbak, de rosszabb teljesítményt is nyújtanak. Az \emph{AIX} operációs rendszerre csak \emph{DB2}, \emph{Oracle} és hatékonynak mondható adatbázis-kezelők vannak.
+
+A párhuzamos koordináták módszere arra is alkalmas, hogy szelektáljunk a változók között. Pl. a \emph{Currency} oszlopnál látszik, hogy semmihez nincs köze. Fontos a változók sorrendje (pl. \emph{Database\_Software}, \emph{Operating\_System} egymás mellé érdemes helyezni).
 
 \section{Összefoglalás}
 
