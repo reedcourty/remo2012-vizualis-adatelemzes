@@ -451,9 +451,25 @@ A már meglévő \emph{Operating\_System}, \emph{Database\_Software} és \emph{C
 
 \subsection{Melyik beszállítót, adatbázis-kezelőt és operációs rendszert tartalmazza a leggyakrabban az adathalmaz?}
 \subsubsection*{Megoldás}
-Vegyünk fel mozaik diagramokat! Ehhez válasszuk ki a \texttt{Company} és \texttt{Database\_Software} oszlopokat, ezután Plot $\rightarrow$ Mosaic Plot, majd végezzük el ugyanezt a \texttt{Company} és \texttt{Operating\_System} oszlopokra is. A legnagyobb területű téglalapokat ki választva nézhetjük meg, hogy melyik a legelterjedtebb OS, DBMS és beszállító a piacon.
+Vegyünk fel mozaik diagramokat! Ehhez válasszuk ki a \oszlopnev{Company} és \oszlopnev{Database\_Software} oszlopokat, ezután \menuelem{Plot $\rightarrow$ Mosaic Plot}, majd végezzük el ugyanezt a \oszlopnev{Company} és \oszlopnev{Operating\_System} oszlopokra is. A legnagyobb területű téglalapokat ki választva nézhetjük meg, hogy melyik a legelterjedtebb OS, DBMS és beszállító a piacon (\ref{fig:legnagyobb_company_os_dbms}.~ábra).
 \subsubsection*{Megállapítások, megjegyzések}
-A legnagyobb téglalapot a HP - MS Windows - MS SQL hármas birtokolja, ami természetesen valószínűleg nem független az elterjedtségtől sem.
+A legnagyobb téglalapot a \emph{HP} - \emph{MS Windows} - \emph{MS SQL} hármas birtokolja, ami valószínűleg nem független az elterjedtségtől sem.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Beszállító - operációs rendszer mozaik diagram]{\label{fig:mondrian_Company_Operating_System_mosaic_plot}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_Operating_System_mosaic_plot.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[Beszállító - adatbázis-kezelő rendszer mozaik diagram]{\label{fig:mondrian_Company_Database_Software_mosaic_plot}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_Database_Software_mosaic_plot.png}}
+  \hfill
+  \subfloat[Beszállítók]{\label{fig:mondrian_Company_barchart_mosaic_plotbol}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_barchart_mosaic_plotbol.png}}
+  ~~~ % Térköz az ábrák között.
+   \subfloat[Operációs rendszerek]{\label{fig:mondrian_Operating_System_barchart_mosaic_plotbol}\includegraphics[width=0.30\textwidth]{figures/mondrian_Operating_System_barchart_mosaic_plotbol.png}}
+  ~~~ % Térköz az ábrák között.
+   \subfloat[Adatbázis-kezelő rendszerek]{\label{fig:mondrian_Database_Software_barchart_mosaic_plotbol}\includegraphics[width=0.30\textwidth]{figures/mondrian_Database_Software_barchart_mosaic_plotbol.png}}
+  \caption{}
+  \label{fig:legnagyobb_company_os_dbms}
+\end{figure}
+
 
 \subsection{Próbáljunk összefüggést találni a teljesítmények, költségek, operációs rendszerek és adatbázis-kezelők között!}
 \subsubsection*{Megoldás}
