@@ -422,10 +422,17 @@ Az \oszlopnev{Operating\_System} oszlopból készítsünk egy barchartot, majd a
   \label{fig:alacsony_TC_operacios_rendszerek}
 \end{figure}
 
-\todo{Itt tartok!}
-
 \subsubsection*{Megállapítások, megjegyzések}
-Az \texttt{Availability\_Date\_year} - \texttt{tpmC} scatterploton kijelölve a felső pontokat látható, hogy a legnagyobb teljesítményt nyújtó gépeken Unix/Linux variánsok futnak, míg az \texttt{Operating\_System} barcharton a Windows-ra kattintva láthatjuk a tpmC ábráján, hogy ezen konfigurációk teljesítménye nem a legjobb.
+Az \emph{Availability\_Date\_year} - \emph{tpmC} pontdiagramon kijelölve a felső pontokat látható, hogy a legnagyobb teljesítményt nyújtó gépeken \emph{Unix/Linux} variánsok futnak (\ref{fig:tpmc_felso_kategoria_os}.~ábra), míg az \emph{Operating\_System} barcharton a \emph{Windows}-ra kattintva láthatjuk a \emph{tpmC} ábráján, hogy ezen konfigurációk teljesítménye nem a legjobb.
+
+\begin{figure}[h!]
+  \centering
+  \subfloat[Évek - teljesítmény, kiemelve a nagy teljesítményű konfigurációk]{\label{fig:mondrian_Availability_Date_year_tpmC_scatterplot_felso_konfigok}\includegraphics[width=0.30\textwidth]{figures/mondrian_Availability_Date_year_tpmC_scatterplot_felso_konfigok.png}}
+  ~~~ % Térköz az ábrák között.
+  \subfloat[Nagy teljesítményű konfigurációk operációs rendszerei]{\label{fig:mondrian_Company_barchart_felso_tpmC_konfigok}\includegraphics[width=0.30\textwidth]{figures/mondrian_Company_barchart_felso_tpmC_konfigok.png}}
+  \caption{Nagy teljesítményű konfigurációk operációs rendszerei}
+  \label{fig:tpmc_felso_kategoria_os}
+\end{figure}
 
 \subsection{Melyik beszállító melyik adatbázis-kezelőben és operációs rendszerben ,,utazik''?}
 \subsubsection*{Megoldás}
