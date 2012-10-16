@@ -229,10 +229,10 @@ A tisztítás fontosabb lépései:
 \begin{sajat_itemize}
 \item importálás táblázatkezelőbe
 \item felesleges sorok eltávolítása
-\item felesleges oszlopok eltávolítása (itt pl. spec. revision, withdraw stb.)
+\item felesleges oszlopok eltávolítása (itt pl. \emph{spec. revision}, \emph{withdraw} stb.)
 \item tizedespont vs. vessző átalakítások a számokat tartalmazó cellákban
-\item új származtatott oszlopok felvétele (itt pl. Price/Perf (USD) és Total Sys. Cost (USD))
-\item adatok aggregálása (itt pl. Database Software, Operating System)
+\item új származtatott oszlopok felvétele (itt pl. \emph{Price/Perf (USD)} és \emph{Total Sys. Cost (USD)})
+\item adatok aggregálása (itt pl. \emph{Database Software}, \emph{Operating System})
 \item exportálás (esetünkben tabulált értékek, hogy a később bemutatásra kerülő Mondriánba tudjuk importálni)
 \end{sajat_itemize}
 
@@ -346,7 +346,7 @@ Válasszuk ki az \oszlopnev{Availability\_Date\_year} vagy \oszlopnev{Availabili
 \subsubsection*{Megállapítások, megjegyzések}
 Látható a teljesítmény növekedése, de néhány csúcsteljesítményű szerver kivételével inkább az alsó sávban helyezkednek el.
 
-Illesszünk regressziós görbét a pontokra. Az \oszlopnev{Availability\_Date\_year - tpmC} scatterplotra jobb gombbal kattintva \menuelem{smoothers $\rightarrow$ ls-line}. \Aref{fig:mondrian_Availability_Date_day_tpmC_scatterplot_ls_line}.~ábra jobb alsó sarkában látható egy lineáris egyenes, amely az LS-line regressziós függvény eredménye, míg \aref{fig:mondrian_Availability_Date_day_tpmC_scatterplot_splines}.~ábrán egy másik algoritmus kimenete látható.
+Illesszünk regressziós görbét a pontokra. Az \oszlopnev{Availability\_Date\_year - tpmC} scatterplotra jobb gombbal kattintva \menuelem{smoothers $\rightarrow$ ls-line}. \Aref{fig:mondrian_Availability_Date_day_tpmC_scatterplot_ls_line}.~ábra jobb alsó sarkában látható egy lineáris egyenes, amely az LS-line\footnote{\url{http://en.wikipedia.org/wiki/Least\_squares}} regressziós függvény eredménye, míg \aref{fig:mondrian_Availability_Date_day_tpmC_scatterplot_splines}.~ábrán egy másik algoritmus kimenete látható.
 
 \begin{figure}[h!]
   \centering
@@ -366,10 +366,13 @@ Illesszünk regressziós görbét a pontokra. Az \oszlopnev{Availability\_Date\_
 \subsubsection*{Ugyanez Boxplot alkalmazásával}
 Válasszuk ki az \texttt{Availability\_Date\_year}, majd a \texttt{tpmC} oszlopokat, Plot $\rightarrow$ Boxplot y by x. Megfigyelhető a mediánok értékének növekedése.
 
+\todo{Ábra}
+
 \subsection{Hogyan alakulnak a tranzakciós és összköltségek?}
 \subsubsection*{Megoldás}
 Válasszuk ki az \texttt{Availability\_Date\_year}, majd a \texttt{Price\_per\_Perf\_in\_USD} oszlopokat, Plot $\rightarrow$ Scatterplot. Ezután az \texttt{Availability\_Date\_year}, \texttt{Total\_Sys\_Cost\_in\_USD} párost hasonló módon. Tegyünk regressziós görbét az ábrákra!
 \todo{Leírni, hogyan tegyük oda a görbét!}
+\todo{Kijelölés után változik a regressziós görbe, erről ábrát, szöveget!}
 Láthatjuk, hogy a tranzakciós költségek csökkennek, viszont a teljes költségek inkább növekednek.
 \subsubsection*{Megállapítások, megjegyzések}
 Ha a tpmC ábrán kijelöljük a felső néhány pontot, akkor megállapíthatjuk, hogy a teljes költségek ugyan magasak, de a teljesítmény/ár arány még mindig jónak számít.
