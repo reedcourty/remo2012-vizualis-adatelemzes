@@ -203,17 +203,17 @@ A segédlet további részében ezeket az eredményeket fogjuk felhasználni.
 %------------------------------------------------------------------------------
 \section{Adattisztítás}
 
-Általában minden adatelemzést megelőz az adatok tisztítása.
+Általában minden adatelemzést megelőz az adatok tisztítása. Gyakran olyan adathalmazt kell feldolgoznunk, amely számunkra felesleges, vagy rosszul formázott adatokat tartalmaznak. Ezeket nekünk kell megfelelő módszerekkel előkészíteni oly módon, hogy abból az elemzés során új információkat, összefüggéseket tudjuk megmutatni.
 
-\todo{Bővíteni!}
+A rosszul formázott adatokra lehet példa a nem megfelelő dátum, vagy a túl sok különböző értéket tartalmazó rekordok, amelyeket érdemes aggregálni a könnyebb megjeleníthetőség, feldolgozhatóság miatt. Az esetlegesen hiányos mezőknek olyan értékeket kell biztosítani, amelyek nem módosítják az elemzés eredményét, ugyanakkor biztosítják azt, hogy a feldolgozó rendszer ne fusson hibába azok hiányából eredően.
+
+Az adattisztítás tipikusan olyan feladat, amelyet csak emberi gondolkodással lehet elvégezni, ám a későbbiekben az esetlegesen ismétlődő részeket érdemes lehet automatizálni.
 
 \subsection{Manuális adattisztítás}
 
 Kisméretű adathalmaz esetén akár kézzel is megtisztíthatjuk azt. Ehhez csak ismernünk kell az adatok jelentését, hogy miből származnak, milyen formátumban állnak rendelkezésre az egyes mezők. Egyszerűsödik a munka, ha olyan elrendezésben érhetőek el, hogy azt egy táblázatkezelő alkalmazásba tudjuk importálni. 
 
 Mostani példánkban a TPC-C eredményeinek átalakításán megyünk végig, áttekintve ezzel az adattisztítás fontosabb lépéseit. Ezek az eredmények letölthetőek a TPC honlapjáról: \url{http://www.tpc.org/downloaded\_result\_files/tpcc\_results.txt}
-
-\todo{Írjuk-e ezt le részletesen, lépésről-lépésre?}
 
 \Aref{fig:tpc_raw}.~ábrán látható az adathalmazunk, miután importáltuk kedvenc táblázatkezelőnkbe.
 
