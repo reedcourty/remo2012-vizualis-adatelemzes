@@ -364,9 +364,13 @@ Illesszünk regressziós görbét a pontokra. Az \oszlopnev{Availability\_Date\_
 \appcomment{Ha valamelyik pont fölé visszük a kurzort és közben nyomva tartjuk a \billkomb{Ctrl}-t akkor kiírja a ponthoz tartozó értékeket.}
 
 \subsubsection*{Ugyanez Boxplot alkalmazásával}
-Válasszuk ki az \texttt{Availability\_Date\_year}, majd a \texttt{tpmC} oszlopokat, Plot $\rightarrow$ Boxplot y by x. Megfigyelhető a mediánok értékének növekedése.
+Válasszuk ki az \oszlopnev{Availability\_Date\_year}, majd a \oszlopnev{tpmC} oszlopokat, \menuelem{Plot $\rightarrow$ Boxplot y by x}. \Aref{fig:mondrian_Availability_Date_year_tpmC_boxplot}.~ábrán megfigyelhető a mediánok értékeinek növekedése.
 
-\todo{Ábra}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.80\textwidth]{figures/mondrian_Availability_Date_year_tpmC_boxplot.png}
+\caption{Az \emph{Availability\_Date\_year} - \emph{tpmC} kapcsolata dobozdiagramon ábrázolva} \label{fig:mondrian_Availability_Date_year_tpmC_boxplot}
+\end{figure}
 
 \subsection{Hogyan alakulnak a tranzakciós és összköltségek?}
 \subsubsection*{Megoldás}
